@@ -8,8 +8,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-http=true \
     media.stagefright.enable-aac=true \
     media.stagefright.enable-qcp=true \
-    media.stagefright.enable-fma2dp=true \
     media.stagefright.enable-scan=true \
+    media.stagefright.enable-record=false \
+    media.stagefright.enable-meta=true \
     mmp.enable.3g2=true \
     mm.enable.smoothstreaming=true \
     mm.enable.qcom_parser=4194303 \
@@ -77,7 +78,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.imglib.fddsp=1 \
     persist.camera.llc=1 \
-    persist.camera.llnoise=1 \
+    persist.camera.llnoise=1
 
 # Display power reduction (FOSS)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -100,7 +101,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qc_nlp_in_use=0 \
-    ro.gps.agps_provider=1
+    ro.gps.agps_provider=1 \
+    ro.com.google.networklocation=0
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -162,7 +164,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.oem.dump=0 \
     persist.radio.hw_mbn_update=0 \
     persist.radio.sw_mbn_update=0 \
-    persist.radio.start_ota_daemon=1
+    persist.radio.start_ota_daemon=1 \
+    ro.ril.power_collapse=1 \
+    ro.ril.disable.power.collapse=0 \
+    ro.ril.hsxpa=2 \
+    ro.ril.gprsclass=10 \
+    ro.ril.hep=1 \
+    ro.ril.hsdpa.category=8 \
+    ro.ril.hsupa.category=6 \
+    ro.ril.enable.sdr=1 \
+    ro.ril.enable.gea3=1 \
+    ro.ril.enable.fd.plmn.prefix=23402,23410,23411 \
+    ro.ril.enable.a52=0 \
+    ro.ril.enable.a53=0 \
+    ro.ril.enable.dtm=0 \
+    ro.telephony.call_ring.delay=0
 
 #default SAR mode 0:off/1:on
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -198,7 +214,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=280 \
+    persist.service.swiqi.enable=true \
+    persist.sys.use_dithering=0
 
 # SSR
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -207,3 +226,42 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fastcharge
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.le_fast_chrg_enable=1
+
+# Power
+PRODUCT_PROPERTY_OVERRIDES += \
+    power.saving.mode=1 \
+    ro.config.hw_power_saving=true \
+    ro.config.hw_quickpoweron=true \
+    power_supply.wakeup=enable
+    
+# Debug
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.showupdates=0 \
+    debug.sf.showcpu=0 \
+    debug.sf.showbackground=0 \
+    debug.sf.showfps=0 \
+    logcat.live=disable \
+    debugtool.anrhistory=0
+
+# Profiler
+PRODUCT_PROPERTY_OVERRIDES += \
+    profiler.force_disable_ulog=1 \
+    profiler.debugmonitor=false \
+    profiler.launch=false \
+    profiler.hung.dumpdobugreport=false \
+    profiler.force_disable_err_rpt=1
+
+# Other
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.hw_fast_dormancy=1 \
+    persist.android.strictmode=0 \
+    ro.service.swiqi.supported=true \
+    boot.fps=27 \
+    ro.lge.proximity.delay=25 \
+    mot.proximity.delay=25 \
+    ro.HOME_APP_ADJ=1 \
+    touch.pressure.scale=2 \
+    persist.sys.scrollingcache=3 \
+    ro.opengl.off=0 \
+    ro.max.fling_velocity=12000 \
+    ro.min.fling_velocity=8000

@@ -1,0 +1,2 @@
+/system/bin/mbn_daemon                                          u:object_r:mbn_daemon_exec:s0
+

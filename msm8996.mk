@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/FOSSConfig.xml:system/etc/FOSSConfig.xml
 
+# SPN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
+
 # Display calibration
 PRODUCT_PACKAGES += \
     libjni_livedisplay

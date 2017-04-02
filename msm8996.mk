@@ -277,4 +277,4 @@ endif
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.model
 
-$(call inherit-product-if-exists, vendor/leeco/msm8996-common/msm8996-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/leeco/x2/x2-vendor.mk)

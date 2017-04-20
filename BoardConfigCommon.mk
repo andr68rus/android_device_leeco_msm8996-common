@@ -229,4 +229,4 @@ endif
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
--include vendor/leeco/msm8996-common/BoardConfigVendor.mk
+-include vendor/leeco/x2/BoardConfigVendor.mk
